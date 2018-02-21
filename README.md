@@ -2,7 +2,7 @@
 
 - Replace `[TOC]` tag into generated catalogue.
 - Use CodeCogs to display Mathjax formula.
-- Escaping some spacial characters.
+- Escape some spacial characters.
 
 # Demo
 
