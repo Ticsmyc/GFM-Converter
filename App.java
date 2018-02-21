@@ -14,6 +14,6 @@ public class App {
         TOCHelper.setCatalogueLevel(3);
         String newMarkdownFilePath = markdownFilePath + ".gfm";
         GFMConverter.convert(markdownFilePath, newMarkdownFilePath);
-        System.out.println(newMarkdownFilePath + " has been generate!");
+        System.out.println(newMarkdownFilePath + " has been generated!");
     }
 }

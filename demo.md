@@ -1,7 +1,5 @@
 <!-- GFM-TOC -->
-* [Title-1](#title-1)
-    * [title-11 Table](#title-11-table)
-    * [title-12 MathJax](#title-12-mathjax)
+* [Title-1 MathJax](#title-1-mathjax)
 * [title-2](#title-2)
     * [title-21](#title-21)
     * [title-22](#title-22)
@@ -12,16 +10,7 @@
 <!-- GFM-TOC -->
 
 
-# Title-1
-
-## title-11 Table
-
-| x | y | z |
-| -- | -- | -- |
-| 1 | 2 | 3 |
-| 4 | 5 | 6 |
-
-## title-12 MathJax
+# Title-1 MathJax
 
 ![](http://latex.codecogs.com/gif.latex?\\\\$$f=\frac{a}{b}$)
 
