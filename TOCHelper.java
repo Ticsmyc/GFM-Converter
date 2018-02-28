@@ -12,7 +12,7 @@ public class TOCHelper {
     }
 
     public static List<String> changeTOCToGeneratedCatalogue(List<String> contents) {
-        List<String> ret = new ArrayList<>();
+        List<String> ret = new ArrayList<String>();
         // If there already existed catalogue in document, then update this catalogue.
         boolean isInOldCatalogue = false;
         for (String text : contents) {
@@ -28,22 +28,22 @@ public class TOCHelper {
         return ret;
     }
 
-    public static String generateCatalogue(List<String> contents) {
+    private static String generateCatalogue(List<String> contents) {
         List<String> titles = getTitles(contents);
         StringBuilder sb = new StringBuilder();
         sb.append(tocTag);
-        sb.append(System.lineSeparator());
+        sb.append(CommonHelper.getLineSeparator());
         for (String title : titles) {
             sb.append(formatTitle(title));
-            sb.append(System.lineSeparator());
+            sb.append(CommonHelper.getLineSeparator());
         }
         sb.append(tocTag);
-        sb.append(System.lineSeparator());
+        sb.append(CommonHelper.getLineSeparator());
         return sb.toString();
     }
 
     private static List<String> getTitles(List<String> contents) {
-        List<String> titles = new ArrayList<>();
+        List<String> titles = new ArrayList<String>();
         boolean isCode = false;
         for (String line : contents) {
             if (line.contains("```")) {
@@ -78,6 +78,7 @@ public class TOCHelper {
         contentIdx++;
         while (title.charAt(contentIdx) == ' ') contentIdx++;
         String content = title.substring(contentIdx);
+        content.trim();
         // replace ' ' to '-'
         String anchor = content.replaceAll(" ", "\\-");
         // remove spacial char

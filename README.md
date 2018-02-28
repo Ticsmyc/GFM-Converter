@@ -6,16 +6,20 @@
 
 # Demo
 
-Go to [demo.md](https://github.com/CyC2018/GFM-Converter/blob/master/demo.md) to see the result.
+[demo.md](https://github.com/CyC2018/GFM-Converter/blob/master/demo.md)
 
 ```html
 [TOC]
 
-# Title-1 MathJax
+# Title-1 MathJax Line
 
 $$ f = \frac{a}{b} $$
 
-# title-2（abc）
+# Title-2 MathJax Inline
+
+$\vec{a}$ and $\vec{b}$
+
+# title-3（abc）
 
 ## title-21、xyz
 
@@ -32,8 +36,9 @@ $$ f = \frac{a}{b} $$
 
 ```html
 <!-- GFM-TOC -->
-* [Title-1 MathJax](#title-1-mathjax)
-* [title-2（abc）](#title-2abc)
+* [Title-1 MathJax Line](#title-1-mathjax-line)
+* [Title-2 MathJax Inline](#title-2-mathjax-inline)
+* [title-3（abc）](#title-3abc)
     * [title-21、xyz](#title-21xyz)
     * [title-22   ijk](#title-22---ijk)
         * [title-221](#title-221)
@@ -43,11 +48,16 @@ $$ f = \frac{a}{b} $$
 <!-- GFM-TOC -->
 
 
-# Title-1 MathJax
+# Title-1 MathJax Line
 
-![](http://latex.codecogs.com/gif.latex?\\\\$$f=\frac{a}{b}$)
+<div align="center"><img src="https://latex.codecogs.com/gif.latex?f=\frac{a}{b}"/></div>
 
-# title-2（abc）
+
+# Title-2 MathJax Inline
+
+<img src="https://latex.codecogs.com/gif.latex?\vec{a}"/> and <img src="https://latex.codecogs.com/gif.latex?\vec{b}"/>
+
+# title-3（abc）
 
 ## title-21、xyz
 

@@ -3,14 +3,20 @@ import java.util.List;
 
 public class GFMConverter {
     public static void convert(String srcFilePath, String detFilePath) {
-        List<String> contents = FileHelper.readLineByLine(srcFilePath);
-        contents = TOCHelper.changeTOCToGeneratedCatalogue(contents);
-        List<String> newContents = new ArrayList<>();
+        List<String> contents = TxtFileHelper.readLineByLine(srcFilePath);
+        List<String> newContents = new ArrayList<String>();
+        boolean isCode = false;
         for (String text : contents) {
-            text = MathJaxHelper.changeMathJaxToCodeCogs(text);
-            text = SpecialsCharsHelper.Escape(text);
+            text = SpecialsCharsHelper.Escape(text, isCode);
+            if (text.contains("```")) {
+                isCode = !isCode;
+            } else if (!isCode) {
+                text = MathJaxHelper.changeMathJaxToCodeCogs(text);
+            }
             newContents.add(text);
         }
-        FileHelper.WriteLineByLine(newContents, detFilePath);
+        newContents = TOCHelper.changeTOCToGeneratedCatalogue(newContents);
+        for (String str : newContents) System.out.println(str);
+        TxtFileHelper.writeLineByLine(newContents, detFilePath);
     }
 }
