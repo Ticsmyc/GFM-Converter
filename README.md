@@ -66,7 +66,7 @@ $$ f = \frac{a}{b} $$
 
 # Useage
 
-You can just run App.java, and then specify the path of Markdown document. After that, a new file suffixed with `.gfm`. will be created.
+You can just run App.java, and then specify the path of Markdown document. After that, a new file suffixed with `.gfm` will be created.
 
 ```java
 javac -encoding UTF-8 App.java
