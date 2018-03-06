@@ -19,7 +19,7 @@ public class MathJaxHelper {
             mathJaxContent = mathJaxContent.replaceAll(" ", "");
             mathJaxContent = "<img src=\"https://latex.codecogs.com/gif.latex?" + mathJaxContent + "\"/>";
             if (isLineMath(text)) {
-                mathJaxContent = "<div align=\"center\">" + mathJaxContent + "</div>" + System.getProperty("line.separator");
+                mathJaxContent = "<div align=\"center\">" + mathJaxContent + "</div> <br>";
             }
             while (endIdx < text.length() && text.charAt(endIdx) == '$') endIdx++;
             sb.append(leftPartContent).append(mathJaxContent);
@@ -38,10 +38,10 @@ public class MathJaxHelper {
 
     private static boolean hasPairs(String text, String str) {
         int idx = text.indexOf(str);
-        if (idx == -1) {
+        if (idx == -1 || (idx != 0 && text.charAt(idx-1) == '\\')) {
             return false;
         }
-        idx = text.indexOf(str, idx + 5);
+        idx = text.indexOf(str, idx + 3);
         return idx != -1;
     }
 }

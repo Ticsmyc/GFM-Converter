@@ -12,6 +12,8 @@ public class GFMConverter {
                 isCode = !isCode;
             } else if (!isCode) {
                 text = MathJaxHelper.changeMathJaxToCodeCogs(text);
+                text = CenterTagHelper.changeCenterTag(text);
+                text = AsteriskCharsHelper.addSpace(text);
             }
             newContents.add(text);
         }

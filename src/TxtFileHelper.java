@@ -23,6 +23,7 @@ public class TxtFileHelper {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         return contents;
     }
 
