@@ -21,7 +21,7 @@
 
 # title-3（abc） img
 
-<br><div align="center"> ![](https://github.com/CyC2018/Interview-Notebook/blob/master/pics/00d8d345-cd4a-48af-919e-209d2788eca7.jpg) </div><br>
+![](https://github.com/CyC2018/Interview-Notebook/blob/master/pics/00d8d345-cd4a-48af-919e-209d2788eca7.jpg)
 
 ## title-21、xyz center
 
