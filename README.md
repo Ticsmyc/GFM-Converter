@@ -13,11 +13,11 @@
 
 # Title-1
 
-$$ f = \frac{a} {b} $$
+$$ f = \frac{a}{b} $$
 
 # Title-2
 
-$\vec{a}$ and $\vec{b}$
+$ \vec{a} $ and $ \vec{b} $
 
 # title-3
 
