@@ -6,7 +6,7 @@
 
 # Demo
 
-[Demo.md](https://github.com/CyC2018/GFM-Converter/blob/master/demo.md)
+[Demo.md](https://github.com/CyC2018/GFM-Converter/blob/master/Demo.md)
 
 ```text
 [TOC]
