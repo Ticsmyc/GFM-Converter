@@ -11,23 +11,23 @@
 ```text
 [TOC]
 
-# Title-1 MathJax Line
+# Title-1
 
 $$ f = \frac{a} {b} $$
 
-# Title-2 MathJax Inline
+# Title-2
 
 $\vec{a}$ and $\vec{b}$
 
 # title-3
 
-## title-21 center
+## title-21
 
-<center>abc</center>
+<center> abc </center>
 
-## title-22 center img
+## title-22
 
-<center>![](pics/1.png)</center>
+<center> ![](pics/1.png) </center>
 
 ### title-221
 
