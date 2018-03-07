@@ -8,7 +8,7 @@
 
 [Demo.md](https://github.com/CyC2018/GFM-Converter/blob/master/demo.md)
 
-```html
+```text
 [TOC]
 
 # Title-1 MathJax Line
