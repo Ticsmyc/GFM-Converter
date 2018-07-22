@@ -33,7 +33,7 @@ $ \vec{a} $ and $ \vec{b} $
 
 ## Picture
 
-<center> ![](pics/1.png) </center>
+<center> ![](doc/1.png) </center>
 ```
 
 
