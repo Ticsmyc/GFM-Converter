@@ -10,7 +10,7 @@
 
 # Preview
 
-[Output.md](https://github.com/CyC2018/GFM-Converter/blob/master/Output.md)
+[Output.md](doc/Output.md)
 
 ```text
 [TOC]
