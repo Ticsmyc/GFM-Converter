@@ -26,5 +26,5 @@
 
 ## Picture
 
-<br><div align="center"> <img src="doc/1.png"/> </div><br>
+<br><div align="center"> <img src="1.png"/> </div><br>
 
