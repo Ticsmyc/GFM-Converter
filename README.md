@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="doc/LogoMakr_0v1ngq.png" width="200px">
+    <img src="doc/LogoMakr_0v1ngq.png" width="350px">
 </div>
 
 <!-- GFM-TOC -->
