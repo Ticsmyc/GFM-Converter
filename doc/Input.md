@@ -18,5 +18,4 @@ $ \vec{a} $ and $ \vec{b} $
 
 ## Picture
 
-<center> ![](pics/1.png) </center>
-
+<center> ![](1.jpg) </center>
