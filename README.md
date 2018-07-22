@@ -3,7 +3,7 @@
 </div>
 
 <!-- GFM-TOC -->
-* [Preview](#preview)111
+* [Preview](#preview)
 * [Introduction](#introduction)
 * [Usage](#usage)
 <!-- GFM-TOC -->
