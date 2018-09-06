@@ -22,9 +22,8 @@
 
 ## Text
 
-<br><div align="center">  What doesn't kill you makes you stronger.  </div><br>
+ What doesn't kill you makes you stronger. 
 
 ## Picture
 
 <br><div align="center"> <img src="1.jpg"/> </div><br>
-
