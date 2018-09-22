@@ -17,6 +17,7 @@
 
 - Replace `[TOC]` tag into generated catalogue.
 - Use CodeCogs to display Mathjax formula.
+- Center images.
 - Escape some spacial characters.
 
 # Usage
