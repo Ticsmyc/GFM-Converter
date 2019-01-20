@@ -123,7 +123,7 @@ public class TOC {
         String anchor = content.replaceAll(" ", "\\-");
 
         // remove spacial char
-        anchor = anchor.replaceAll("[.：（）()*/、:+]", "");
+        anchor = anchor.replaceAll("[.：（）()*/、:+，]", "");
 
         // uppercase to lowercase
         anchor = anchor.toLowerCase();
