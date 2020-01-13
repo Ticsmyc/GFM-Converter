@@ -50,7 +50,7 @@ public class TxtFileUtil {
 
         BufferedWriter bw;
         try {
-            bw = new BufferedWriter(new FileWriter(filePath));
+            bw = new BufferedWriter(new FileWriter(filePath,true));
             for (String text : contents) {
                 bw.write(text);
                 bw.write(CommonUtil.getLineSeparator());

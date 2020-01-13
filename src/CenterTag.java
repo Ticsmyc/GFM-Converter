@@ -1,5 +1,10 @@
 public class CenterTag {
 
+    /**
+     * 有center标签的文本，换成div标签，center由align指定
+     * @param text
+     * @return
+     */
     public static String convert(String text) {
 
         boolean containsCenterTag = text.contains("<center>") && text.contains("</center>");

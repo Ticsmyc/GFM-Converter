@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class GFM {
@@ -27,9 +28,11 @@ public class GFM {
         }
 
         newContents = TOC.changeTOCToGeneratedCatalogue(newContents);
+        //String topic=TOC.generateCatalogue(contents);
 
         for (String str : newContents) System.out.println(str);
 
+        //TxtFileUtil.writeLineByLine(Collections.singletonList(topic), detFilePath);
         TxtFileUtil.writeLineByLine(newContents, detFilePath);
     }
 }

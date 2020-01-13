@@ -1,5 +1,10 @@
 public class AsteriskChars {
-
+    /**
+     * 给**XX**加空格 ，格式如下：
+     * XXXXX **XXXXXXXX** XXXXX
+     * @param text
+     * @return
+     */
     public static String addSpace(String text) {
 
         int startIdx = text.indexOf("**");

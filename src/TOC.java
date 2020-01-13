@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// Generate GFM support TOC tag
+//生成一个！ 可以在github上跳转的目录
 public class TOC {
 
     private final static String tocTagBefore = "[TOC]";
@@ -19,14 +19,15 @@ public class TOC {
 
         List<String> ret = new ArrayList<String>();
 
-        // If there already existed catalogue of document, then update this catalogue.
+        // 如果原文档有目录了，就在它的基础上改变.
         boolean isInOldCatalogue = false;
 
-        // Make sure generate once.
+        // 确保要生成一个目录
         boolean hasGenerated = false;
 
         for (String text : contents) {
             if (isInOldCatalogue) {
+                //当前位置是原来的目录
                 if (text.contains(tocTagAfter)) {
                     ret.add(generateCatalogue(contents));
                     hasGenerated = true;
@@ -46,8 +47,12 @@ public class TOC {
         return ret;
     }
 
-
-    private static String generateCatalogue(List<String> contents) {
+    /**
+     * 生成目录
+     * @param contents
+     * @return
+     */
+    public static String generateCatalogue(List<String> contents) {
 
         List<String> titles = getTitles(contents);
 
@@ -64,7 +69,11 @@ public class TOC {
         return sb.toString();
     }
 
-
+    /**
+     * 寻找标题，返回一个list
+     * @param contents
+     * @return
+     */
     private static List<String> getTitles(List<String> contents) {
 
         List<String> titles = new ArrayList<String>();
@@ -73,6 +82,7 @@ public class TOC {
 
         for (String line : contents) {
             if (line.contains("```")) {
+                //代码片段不处理
                 isCode = !isCode;
             } else if (line.startsWith("#") && !isCode && getLevelOfATitle(line) <= TOC.level) {
                 titles.add(line);
@@ -82,7 +92,11 @@ public class TOC {
         return titles;
     }
 
-
+    /**
+     * 获取标题级别：  几个#
+     * @param title
+     * @return
+     */
     private static int getLevelOfATitle(String title) {
 
         int cnt = 0;
@@ -96,7 +110,11 @@ public class TOC {
         return cnt;
     }
 
-
+    /**
+     * 标题样式 ： 空格*n + * + 空格*1 + [#
+     * @param title
+     * @return
+     */
     private static String formatTitle(String title) {
 
         StringBuilder ret = new StringBuilder();
@@ -116,16 +134,17 @@ public class TOC {
         }
 
         String content = title.substring(contentIdx);
-
+        //content：标题名
         content = content.trim();
 
-        // replace ' ' to '-'
+        //anchor ： 锚点名
+        //"空格"换成 "-"
         String anchor = content.replaceAll(" ", "\\-");
 
-        // remove spacial char
+        // 去掉括号等特殊字符
         anchor = anchor.replaceAll("[.：（）()*/、:+，]", "");
 
-        // uppercase to lowercase
+        // 转小写
         anchor = anchor.toLowerCase();
 
         ret.append("[").append(content).append("]");
