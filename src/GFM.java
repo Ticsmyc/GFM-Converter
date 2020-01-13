@@ -15,6 +15,7 @@ public class GFM {
             text = SpecialsChars.Escape(text, isCode);
 
             if (text.contains("```")) {
+                //是代码块，不作处理
                 isCode = !isCode;
             } else if (!isCode) {
                 text = MathJaxHelper.changeMathJaxToCodeCogs(text);

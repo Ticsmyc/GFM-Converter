@@ -2,9 +2,16 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 文件读写工具类
+ */
 public class TxtFileUtil {
 
-    // Read the file content line by line
+    /**
+     * 按行读取文件，存入一个list
+     * @param filePath
+     * @return
+     */
     public static List<String> readLineByLine(String filePath) {
 
         List<String> contents = new ArrayList<String>();
@@ -34,7 +41,11 @@ public class TxtFileUtil {
     }
 
 
-    // Write the file content line by line
+    /**
+     * 按行写文件
+     * @param contents
+     * @param filePath
+     */
     public static void writeLineByLine(List<String> contents, String filePath) {
 
         BufferedWriter bw;
@@ -50,7 +61,11 @@ public class TxtFileUtil {
         }
     }
 
-
+    /**
+     * 文件拷贝 ： 输入流输出流对接
+     * @param srcPath
+     * @param detPath
+     */
     public static void copyFile(String srcPath, String detPath) {
 
         try {
@@ -71,7 +86,10 @@ public class TxtFileUtil {
         }
     }
 
-
+    /**
+     * 删除目录 ： 递归删除文件
+     * @param dirPath
+     */
     public static void deleteDirectory(String dirPath) {
 
         File dir = new File(dirPath);
